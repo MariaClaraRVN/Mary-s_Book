@@ -1,0 +1,116 @@
+ /* Reset CSS */
+ * {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+}
+
+/* Estilos Globais */
+body {
+    background: linear-gradient(to right, #2d3870, #0a0e27); /* Fundo gradiente */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+/* Estilo do header */
+header {
+    background-color: #1a1f4b;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px; /* Adiciona margem inferior para centralizar verticalmente */
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+/* Estilos para o main content */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-top: 20px; /* Adiciona margem superior para centralizar verticalmente */
+    margin-bottom: 20px; /* Adiciona margem inferior para centralizar verticalmente */
+}
+
+/* Estilo da imagem */
+.book-image img {
+    max-width: 100%;
+    height: auto;
+    float: right; /* Move a imagem para a direita */
+    border-radius: 10px;
+
+}
+
+/* Estilo dos detalhes do livro */
+.book-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.book-details h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.book-description {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 50%;
+    text-align: justify;
+}
+
+/* Estilo do botão */
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f599e7;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.buy-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.buy-button:hover {
+    background-color: #d4bad0;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse; /* Inverter a ordem dos elementos */
+        align-items: center;
+    }
+
+    .book-details {
+        order: 2; /* Defina a ordem do elemento para 2, para que ele apareça após a imagem */
+        text-align: center; /* Centralizar o conteúdo */
+        margin-bottom: 20px; /* Adicionar margem inferior para separar os elementos */
+        
+    }
+
+    .book-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .book-description{
+        max-width: 100%;
+        text-align: justify;
+    }
+
+}
